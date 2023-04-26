@@ -19,8 +19,4 @@ Vagrant.configure("2") do |config|
 			end
 		end
 	end
-
-	config.vm.define "server1" do |web|
-		web.vm.network "forwarded_port", guest: 80, host: 80, host_ip: "0.0.0.0", id: "nginx"
-	end
 end
